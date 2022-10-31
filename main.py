@@ -68,16 +68,16 @@ def generate_liked_songs_poster(outfile):
     _, spotify = auth()
     tracks = curr_user_library_tracks(spotify)
     visual_configs = make_visual_configs(tracks) 
-    graphics.make_poster(visual_configs, outfile=outfile)
+    graphics.make_color_sorted_poster(visual_configs, outfile=outfile)
 
 def generate_poster_from_playlist(outfile, playlist_name):
     _, spotify = auth()
     playlists = curr_user_playlists(spotify)
     tracks = curr_user_playlist_tracks(spotify, playlists, playlist_name)
     visual_configs = make_visual_configs(tracks) 
-    graphics.make_poster(visual_configs, outfile=outfile)
+    graphics.make_color_sorted_poster(visual_configs, outfile=outfile)
 
 if __name__ == '__main__':
     # generate_liked_songs_poster("out.png")
-    # generate_poster_from_playlist('out.png', 'Your Top Songs 2021')
+    generate_poster_from_playlist('out.png', 'Your Top Songs 2021')
 

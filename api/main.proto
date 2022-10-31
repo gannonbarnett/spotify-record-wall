@@ -1,0 +1,32 @@
+syntax = "proto3";
+package tutorial;
+
+message SendCredentialsRequest {
+    string id = 1;    
+    string secret = 2;
+    string redirect_uri = 3;
+}
+message SendCredentialsResponse {
+    bool success = 1;
+}
+
+message GetPlaylistsRequest {}
+message GetPlaylistsResponse {
+    repeated string playlists = 1;
+    bool success = 2;
+}
+
+message MakePosterRequest {
+    bool liked_songs = 1;
+    string playlist = 2;
+}
+message MakePosterResponse {
+    string poster_id = 1;
+
+    message Image {
+        bytes data = 1;
+        int32 height = 2;
+        int32 width = 3;
+    }
+    Image image = 2;
+}
