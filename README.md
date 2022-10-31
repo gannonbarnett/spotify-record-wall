@@ -6,4 +6,5 @@ not so easy.
 
 *this repo is a wip*
 
+Here's an example. It's a big file - meant for a large poster, not a website.
 ![](out.png)
