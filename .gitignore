@@ -1,5 +1,4 @@
 export_secrets.sh
-*.png
 *.pdf
 *.zip
 *.cache*
